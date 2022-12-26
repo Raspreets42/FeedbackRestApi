@@ -26,7 +26,7 @@ app.use('/api' , router_routes);
 
 const start = async() => {
     try {
-        await connectDB(process.env.MONGODB_URL);
+        await connectDB();
         app.listen(port , () => {
             console.log(`server is listening at port ${port}`);
         })
