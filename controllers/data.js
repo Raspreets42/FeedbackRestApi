@@ -11,11 +11,8 @@ const postFeedbacks = async (req, res) => {
         const giveFeedback = new Feedback({
             FirstName: req.body.FirstName,
             LastName: req.body.LastName,
-            Phone: req.body.Phone,
-            Email: req.body.Email,
-            Age: req.body.Age,
-            Gender: req.body.Gender,
-            Comments: req.body.Comments
+            subject: req.body.subject,
+            message: req.body.message
     });
     const received = await giveFeedback.save();
     console.log('data saved');
