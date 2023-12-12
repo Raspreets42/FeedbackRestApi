@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const connectDB = () => {
-    return mongoose.connect("mongodb+srv://raspreetdb:dbpreetsingh@cluster0.lh13d.mongodb.net/raspreetportfolio?retryWrites=true&w=majority", {
+    return mongoose.connect(process.env.MONGODB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     }).then(() => {
